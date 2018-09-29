@@ -1,0 +1,33 @@
+#serevr
+server:
+  port: 8444
+  tomcat:
+    max-threads: 500
+    max-connections: 500
+    min-spare-threads: 200
+    accept-count: 2000
+    uri-encoding: UTF-8
+#  ssl:
+#      enabled: true
+#      key-store: classpath:morningtec.jks
+#      key-store-password: morningtec
+
+#mybatis
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.morningtecjp.sdkserver.entity
+  config-location: classpath:mybatis-config.xml
+
+mapper:
+  mappers: com.sheldon.dynamictable.common.MyMapper
+  not-empty: false
+  identity: MYSQL
+
+#logging
+logging:
+  config: classpath:log4j2.xml
+
+#spring
+spring:
+  application:
+    name: sdkserver

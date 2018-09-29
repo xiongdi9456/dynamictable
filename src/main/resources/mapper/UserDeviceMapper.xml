@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sheldon.dynamictable.dao.UserDeviceMapper">
+  <resultMap id="BaseResultMap" type="com.sheldon.dynamictable.entity.UserDevice">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ud_device_id" jdbcType="VARCHAR" property="udDeviceId" />
+    <result column="ud_user_id" jdbcType="VARCHAR" property="udUserId" />
+    <result column="ud_logintype" jdbcType="INTEGER" property="udLogintype" />
+  </resultMap>
+
+  <insert id="updateOrInsertUserDevice" statementType="STATEMENT" parameterType="String">
+    INSERT INTO `${tableName}` (`ud_device_id`,`ud_user_id`,`ud_logintype`) VALUES (${udid},${userId},${loginType}) ON DUPLICATE KEY UPDATE `ud_user_id` = ${userId},`ud_logintype` = ${loginType};
+  </insert>
+
+</mapper>

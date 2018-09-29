@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sheldon.dynamictable.dao.UserMapper">
+  <resultMap id="BaseResultMap" type="com.sheldon.dynamictable.entity.User">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="device_id" jdbcType="VARCHAR" property="deviceId" />
+    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="migrate_pass" jdbcType="VARCHAR" property="migratePass" />
+    <result column="twitter_id" jdbcType="VARCHAR" property="twitterId" />
+    <result column="birthday" jdbcType="VARCHAR" property="birthday" />
+    <result column="os" jdbcType="INTEGER" property="os" />
+    <result column="flag" jdbcType="INTEGER" property="flag" />
+    <result column="create_time" jdbcType="VARCHAR" property="createTime" />
+  </resultMap>
+
+  <insert id="registUser" statementType="STATEMENT" parameterType="String">
+    INSERT INTO `${tableName}` (`id`,`device_id`,`os`,`flag`,`migrate_pass`,`user_id`,`twitter_id`,`create_time`) VALUES (NULL, ${udid},'1','1','pass', ${uid}, '','2018-09-30 13:00:00');
+  </insert>
+
+</mapper>
