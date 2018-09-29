@@ -1,0 +1,12 @@
+执行sql耗时:375 ms - id:com.sheldon.dynamictable.dao.UserMapper.registUser - Sql:
+   INSERT INTO `user2` (`id`,`device_id`,`os`,`flag`,`migrate_pass`,`user_id`,`twitter_id`,`create_time`) VALUES (NULL, 'muphone9999','1','1','pass', '999999', '','2018-09-30 13:00:00');
+执行sql耗时:13 ms - id:com.sheldon.dynamictable.dao.UserDeviceMapper.updateOrInsertUserDevice - Sql:
+   INSERT INTO `user_device2` (`ud_device_id`,`ud_user_id`,`ud_logintype`) VALUES ('muphone9999','999999','1') ON DUPLICATE KEY UPDATE `ud_user_id` = '999999',`ud_logintype` = '1';
+执行sql耗时:310 ms - id:com.sheldon.dynamictable.dao.UserMapper.registUser - Sql:
+   INSERT INTO `user2` (`id`,`device_id`,`os`,`flag`,`migrate_pass`,`user_id`,`twitter_id`,`create_time`) VALUES (NULL, 'muphone9999','1','1','pass', '999999', '','2018-09-30 13:00:00');
+执行sql耗时:8 ms - id:com.sheldon.dynamictable.dao.UserDeviceMapper.updateOrInsertUserDevice - Sql:
+   INSERT INTO `user_device2` (`ud_device_id`,`ud_user_id`,`ud_logintype`) VALUES ('muphone9999','999999','1') ON DUPLICATE KEY UPDATE `ud_user_id` = '999999',`ud_logintype` = '1';
+INSERT INTO `user1` (`id`,`device_id`,`os`,`flag`,`migrate_pass`,`user_id`,`twitter_id`,`create_time`) VALUES (NULL, '1111111111','1','1','pass', '222222', '','2018-09-30 13:00:00');
+INSERT INTO `user_device1` (`ud_device_id`,`ud_user_id`,`ud_logintype`) VALUES ('1111111111','222222','1') ON DUPLICATE KEY UPDATE `ud_user_id` = '222222',`ud_logintype` = '1';
+INSERT INTO `user1` (`id`,`device_id`,`os`,`flag`,`migrate_pass`,`user_id`,`twitter_id`,`create_time`) VALUES (NULL, '1111111111','1','1','pass', '3333', '','2018-09-30 13:00:00');
+UPDATE `user1` SET `user_id`='66666' WHERE `device_id`= '1111111111'

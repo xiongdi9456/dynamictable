@@ -7,7 +7,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import tk.mybatis.spring.annotation.MapperScan;
 
 @SpringBootApplication
-@EnableTransactionManagement
+//@EnableTransactionManagement
 @MapperScan(basePackages = "com.sheldon.dynamictable.dao",markerInterface = MyMapper.class)
 public class DynamictableApplication {
 

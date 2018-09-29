@@ -27,4 +27,13 @@ public class UseController {
         return "ok";
     }
 
+    @RequestMapping(value = "/user/update", method = RequestMethod.GET)
+    public String update(Integer gameId, String udid, String uid) {
+
+        mUserService.updateUser(gameId,udid,uid);
+        return "ok";
+    }
+
+
+
 }

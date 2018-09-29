@@ -20,4 +20,8 @@
     INSERT INTO `${tableName}` (`id`,`device_id`,`os`,`flag`,`migrate_pass`,`user_id`,`twitter_id`,`create_time`) VALUES (NULL, ${udid},'1','1','pass', ${uid}, '','2018-09-30 13:00:00');
   </insert>
 
+  <update id="updateUser" statementType="STATEMENT" parameterType="String">
+    UPDATE `${tableName}` SET `user_id`=${uid} WHERE `device_id`= ${udid}
+  </update>
+
 </mapper>

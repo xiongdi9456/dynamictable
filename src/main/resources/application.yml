@@ -15,7 +15,7 @@ server:
 #mybatis
 mybatis:
   mapper-locations: classpath:mapper/*.xml
-  type-aliases-package: com.morningtecjp.sdkserver.entity
+  type-aliases-package: com.sheldon.dynamictable.dao
   config-location: classpath:mybatis-config.xml
 
 mapper:
